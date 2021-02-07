@@ -13,12 +13,12 @@ class FileWriterService
     {
         $this->map = $data->map;
         $filename = 'output_Adventure.txt';
-        $file = fopen(__DIR__.'/../ressources/data/'.$filename, 'w') or exit('Unable to open file!');
+        $file = fopen(__DIR__.'/../ressources/data/output/'.$filename, 'w') or exit('Unable to open file!');
         $this->writeMapValues($file, $data->map);
         $this->writeJoueursValues($file, $data->joueurs);
         fclose($file);
 
-        return new BinaryFileResponse(__DIR__.'/../ressources/data/'.$filename);
+        return new BinaryFileResponse(__DIR__.'/../ressources/data/output/'.$filename);
     }
 
     private function writeMapValues($file, $map)

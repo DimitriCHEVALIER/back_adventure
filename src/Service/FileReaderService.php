@@ -15,7 +15,7 @@ class FileReaderService
     public function translateFile($filename)
     {
         $this->joueurs = [];
-        foreach (file(__DIR__.'/../ressources/data/'.$filename) as $line) {
+        foreach (file(__DIR__.'/../ressources/data/input/'.$filename) as $line) {
             if ('#' == substr("$line", 1)) {
                 continue;
             }
