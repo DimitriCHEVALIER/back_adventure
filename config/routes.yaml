@@ -1,3 +1,13 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+fos_get_output_file:
+  controller: App\Controller\DataFileController::getOutputFile
+  path: /get_output_file/{data}
+  methods: [POST]
+
+fos_get_input_file:
+  controller: App\Controller\DataFileController::getInputFile
+  path: /get_input_file
+  methods: [GET]
