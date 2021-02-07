@@ -1,12 +1,9 @@
 <?php
 
-
 namespace App\Entity;
-
 
 class Game
 {
-
     private $map;
 
     private $joueurs;
@@ -27,11 +24,13 @@ class Game
 
     /**
      * @param mixed $map
+     *
      * @return Game
      */
     public function setMap($map)
     {
         $this->map = $map;
+
         return $this;
     }
 
@@ -45,11 +44,13 @@ class Game
 
     /**
      * @param mixed $joueurs
+     *
      * @return Game
      */
     public function setJoueurs($joueurs)
     {
         $this->joueurs = $joueurs;
+
         return $this;
     }
 }

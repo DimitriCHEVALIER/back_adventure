@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Utils;
-
 
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\Response;

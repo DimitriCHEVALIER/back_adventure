@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Controller;
-
 
 use App\Service\FileReaderService;
 use App\Service\FileWriterService;
