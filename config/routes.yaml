@@ -9,5 +9,5 @@ fos_get_output_file:
 
 fos_get_input_file:
   controller: App\Controller\DataFileController::getInputFile
-  path: /get_input_file
+  path: /get_input_file/{name}
   methods: [GET]
