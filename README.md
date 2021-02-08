@@ -2,3 +2,6 @@
 - composer install
 
 - symfony server:start
+
+# Tests unitaires
+- php bin/phpunit

@@ -62,8 +62,8 @@ class FileReaderService
         if (sizeof($params) <= 2) {
             throw new InvalidArgumentException('Fichier non valide');
         }
-        for ($i = 0; $i < intval($params[1]); ++$i) {
-            for ($j = 0; $j < intval($params[2]); ++$j) {
+        for ($i = 0; $i < intval($params[2]); ++$i) {
+            for ($j = 0; $j < intval($params[1]); ++$j) {
                 $this->map[$i][$j] = new CaseMap(CaseMap::PLAINE);
             }
         }
@@ -77,7 +77,7 @@ class FileReaderService
         if (sizeof($params) <= 2) {
             throw new InvalidArgumentException('Fichier non valide');
         }
-        $this->map[intval($params[1])][intval($params[2])]->setType(CaseMap::MONTAGNE);
+        $this->map[intval($params[2])][intval($params[1])]->setType(CaseMap::MONTAGNE);
     }
 
     /** Ajout d'un trésor sur la carte.
@@ -88,8 +88,8 @@ class FileReaderService
         if (sizeof($params) <= 3) {
             throw new InvalidArgumentException('Fichier non valide');
         }
-        $this->map[intval($params[1])][intval($params[2])]->setType(CaseMap::TRESOR);
-        $this->map[intval($params[1])][intval($params[2])]->addTresors(intval($params[3]));
+        $this->map[intval($params[2])][intval($params[1])]->setType(CaseMap::TRESOR);
+        $this->map[intval($params[2])][intval($params[1])]->addTresors(intval($params[3]));
     }
 
     /** Ajout d'un Joueur pour partir à l'aventure.
@@ -105,7 +105,7 @@ class FileReaderService
         $newJoueur->setNom($params[1])
             ->setOrientation($params[4])
             ->setSequence($params[5]);
-        $this->map[intval($params[2])][intval($params[3])]->setJoueur($newJoueur);
+        $this->map[intval($params[3])][intval($params[2])]->setJoueur($newJoueur);
         array_push($this->joueurs, $newJoueur);
     }
 }

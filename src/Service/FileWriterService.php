@@ -43,10 +43,10 @@ class FileWriterService
         for ($i = 0; $i < sizeof($map); ++$i) {
             for ($j = 0; $j < sizeof($map[0]); ++$j) {
                 if (CaseMap::MONTAGNE === $map[$i][$j]->type) {
-                    $lineMountain = 'M - '.$i.' - '.$j."\n";
+                    $lineMountain = 'M - '.$j.' - '.$i."\n";
                     fwrite($file, $lineMountain);
                 } elseif (CaseMap::TRESOR === $map[$i][$j]->type) {
-                    $lineTreasure = 'T - '.$i.' - '.$j.' - '.$map[$i][$j]->nbr_tresors."\n";
+                    $lineTreasure = 'T - '.$j.' - '.$i.' - '.$map[$i][$j]->nbr_tresors."\n";
                     fwrite($file, $lineTreasure);
                 }
             }
@@ -77,8 +77,8 @@ class FileWriterService
             for ($j = 0; $j < sizeof($this->map[0]); ++$j) {
                 if (property_exists($this->map[$i][$j], 'joueur') && null !== $this->map[$i][$j]->joueur && $idJoueur === $this->map[$i][$j]->joueur->id) {
                     return [
-                      'x' => $i,
-                      'y' => $j,
+                      'x' => $j,
+                      'y' => $i,
                   ];
                 }
             }

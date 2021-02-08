@@ -1,4 +1,4 @@
 C - 2 - 2
-T - 0 - 0 - 0
+T - 0 - 0 - 2
 M - 1 - 0
-T - Daniel Jackson - 0 - 0 - O - 2
+A - Daniel Jackson - 0 - 1 - O - 0
