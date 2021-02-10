@@ -33,7 +33,13 @@ class DataFileController extends AbstractController
      */
     public function getInputFile($name)
     {
-        return $this->jsonResponse->success($this->fileReaderService->translateFile($name));
+        try {
+            $translatedFile = $this->fileReaderService->translateFile($name);
+
+            return $this->jsonResponse->success($translatedFile);
+        } catch (\Exception $e) {
+            return $this->jsonResponse->error($e->getMessage());
+        }
     }
 
     /**
@@ -47,10 +53,16 @@ class DataFileController extends AbstractController
     /**
      * @Route("/get_output_file")
      *
-     * @return BinaryFileResponse
+     * @return BinaryFileResponse|Response
      */
     public function getOutputFile(Request $request)
     {
-        return $this->fileWriterService->generateOutPutFile(json_decode($request->getContent()));
+        try {
+            $generatedFile = $this->fileWriterService->generateOutPutFile(json_decode($request->getContent()));
+
+            return $generatedFile;
+        } catch (\Exception $e) {
+            return $this->jsonResponse->error($e->getMessage());
+        }
     }
 }

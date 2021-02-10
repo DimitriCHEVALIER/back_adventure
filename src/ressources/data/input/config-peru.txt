@@ -1,8 +1,8 @@
-C - 5 - 5
-M - 1 - 0
-M - 2 - 1
-M - 2 - 3
-T - 1 - 3 - 2
+C - 9 - 5
+M - 1 - 4
+M - 4 - 4
+M - 0 - 0
+T - 8 - 4 - 2
 T - 1 - 2 - 3
-A - Daniel Jackson - 1 - 1 - S - AADADAGGAD
-A - Jack O'Neill - 2 - 3 - N - AADADAGGAD
+A - Daniel Jackson - 2 - 4 - S - AADADAGGAD
+A - Jack O'Neill - 1 - 4 - N - AADADAGGAD

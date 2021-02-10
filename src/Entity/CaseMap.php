@@ -47,7 +47,8 @@ class CaseMap
     }
 
     /**
-     * @param int $nbrTresors
+     * @param $value
+     * @return CaseMap
      */
     public function addTresors($value): CaseMap
     {

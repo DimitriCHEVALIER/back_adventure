@@ -27,31 +27,38 @@ class FileReaderService
      * @param $filename
      *
      * @return Game
+     *
+     * @throws InvalidArgumentException
      */
     public function translateFile($filename)
     {
-        $this->joueurs = [];
-        foreach (file(__DIR__.'/../ressources/data/input/'.$filename) as $line) {
-            if ('#' == substr("$line", 1)) {
-                continue;
+        /* @var InvalidArgumentException $e */
+        try {
+            $this->joueurs = [];
+            foreach (file(__DIR__.'/../ressources/data/input/'.$filename) as $line) {
+                if ('#' == substr("$line", 1)) {
+                    continue;
+                }
+                // clean des caractère non textuels
+                $line = str_replace("\r", '', $line);
+                $line = str_replace("\n", '', $line);
+                // On répcupère les paramètres de la ligne un par un
+                $tabledLines = explode(' - ', $line);
+                if ($tabledLines && 'C' == $tabledLines[0]) {
+                    $this->createMap($tabledLines);
+                } elseif ($tabledLines && 'M' == $tabledLines[0]) {
+                    $this->createMountain($tabledLines);
+                } elseif ($tabledLines && 'T' == $tabledLines[0]) {
+                    $this->setTresor($tabledLines);
+                } elseif ($tabledLines && 'A' == $tabledLines[0]) {
+                    $this->addAventurier($tabledLines);
+                }
             }
-            // clean des caractère non textuels
-            $line = str_replace("\r", '', $line);
-            $line = str_replace("\n", '', $line);
-            // On répcupère les paramètres la ligne un par un
-            $tabledLines = explode(' - ', $line);
-            if ($tabledLines && 'C' == $tabledLines[0]) {
-                $this->createMap($tabledLines);
-            } elseif ($tabledLines && 'M' == $tabledLines[0]) {
-                $this->createMountain($tabledLines);
-            } elseif ($tabledLines && 'T' == $tabledLines[0]) {
-                $this->setTresor($tabledLines);
-            } elseif ($tabledLines && 'A' == $tabledLines[0]) {
-                $this->addAventurier($tabledLines);
-            }
-        }
 
-        return new Game($this->map, $this->joueurs);
+            return new Game($this->map, $this->joueurs);
+        } catch (\InvalidArgumentException $e) {
+            throw $e;
+        }
     }
 
     /** Création de la matrice de carte, par défaut enièrement en plaine.
@@ -74,7 +81,7 @@ class FileReaderService
      */
     private function createMountain($params)
     {
-        if (sizeof($params) <= 2) {
+        if ($this->hasSizeMapErrors(2, $params, 2, 1)) {
             throw new InvalidArgumentException('Fichier non valide');
         }
         $this->map[intval($params[2])][intval($params[1])]->setType(CaseMap::MONTAGNE);
@@ -85,7 +92,7 @@ class FileReaderService
      */
     private function setTresor($params)
     {
-        if (sizeof($params) <= 3) {
+        if ($this->hasSizeMapErrors(3, $params, 2, 1)) {
             throw new InvalidArgumentException('Fichier non valide');
         }
         $this->map[intval($params[2])][intval($params[1])]->setType(CaseMap::TRESOR);
@@ -97,8 +104,11 @@ class FileReaderService
      */
     private function addAventurier($params)
     {
-        if (sizeof($params) <= 5) {
+        // Gestion des erreurs de fichier, si les valeures insérées ne sont pas bonne
+        if ($this->hasSizeMapErrors(5, $params, 3, 2)) {
             throw new InvalidArgumentException('Fichier non valide');
+        } elseif (null !== $this->map[intval($params[3])][intval($params[2])]->getJoueur()) {
+            throw new InvalidArgumentException('Deux joueurs ne peuvent pas commencer sur la meme case');
         }
         $newJoueur = new Joueur();
 
@@ -107,5 +117,11 @@ class FileReaderService
             ->setSequence($params[5]);
         $this->map[intval($params[3])][intval($params[2])]->setJoueur($newJoueur);
         array_push($this->joueurs, $newJoueur);
+    }
+
+    private function hasSizeMapErrors($nbrRequiredParams, $params, $x, $y)
+    {
+        return sizeof($params) <= $nbrRequiredParams || $params[$x] < 0 || $params[$y] < 0 || $params[$x] >= sizeof($this->map)
+            || $params[$y] >= sizeof($this->map[0]);
     }
 }

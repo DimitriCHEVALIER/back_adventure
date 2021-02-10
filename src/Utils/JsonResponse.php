@@ -18,4 +18,9 @@ class JsonResponse
     {
         return new Response($this->serializer->serialize($content, 'json'), Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
+
+    public function error($error)
+    {
+        return new Response($error, Response::HTTP_INTERNAL_SERVER_ERROR, ['Content-Type' => 'application/json']);
+    }
 }
