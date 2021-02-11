@@ -7,6 +7,7 @@ use App\Entity\Game;
 use App\Entity\Joueur;
 use App\Service\FileReaderService;
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\Console\Exception\InvalidArgumentException;
 
 class FileReaderServiceTest extends TestCase
 {
@@ -41,5 +42,11 @@ class FileReaderServiceTest extends TestCase
         $this->assertEquals($expectedJoueur->getOrientation(), $translatedFile->getJoueurs()[0]->getOrientation());
         $this->assertEquals(1, sizeof($translatedFile->getJoueurs()));
         $this->assertEquals(sizeof($expectedMap), sizeof($translatedFile->getMap()));
+    }
+
+    public function testTranslateFileOutOfMap(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->fileReaderService->translateFile('input-test-error.txt');
     }
 }
