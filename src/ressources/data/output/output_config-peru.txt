@@ -1,8 +1,7 @@
 C - 5 - 9
 M - 0 - 0
 T - 1 - 2 - 2
-M - 1 - 4
 M - 4 - 4
 T - 8 - 4 - 2
-A - Daniel Jackson - 2 - 4 - O - 0
-A - Jack O'Neill - 2 - 1 - E - 1
+A - Daniel Jackson - 1 - 4 - O - 0
+A - Jack O'Neill - 2 - 2 - E - 1
