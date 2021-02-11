@@ -45,7 +45,7 @@ class FileWriterService
                 if (CaseMap::MONTAGNE === $map[$i][$j]->type) {
                     $lineMountain = 'M - '.$j.' - '.$i."\n";
                     fwrite($file, $lineMountain);
-                } elseif (CaseMap::TRESOR === $map[$i][$j]->type) {
+                } elseif (CaseMap::TRESOR === $map[$i][$j]->type && $map[$i][$j]->nbr_tresors > 0) {
                     $lineTreasure = 'T - '.$j.' - '.$i.' - '.$map[$i][$j]->nbr_tresors."\n";
                     fwrite($file, $lineTreasure);
                 }
