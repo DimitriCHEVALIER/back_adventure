@@ -2,8 +2,8 @@
 
 namespace App\Utils;
 
-use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class JsonResponse
 {
@@ -16,14 +16,10 @@ class JsonResponse
 
     public function success($content, $groups = null)
     {
-        $parameters = [
-            'Content-Type' => 'application/json',
-        ];
-        if (null !== $groups) {
-            $parameters['groups'] = $groups;
-        }
+        $parameters['groups'] = $groups;
 
-        return new Response($this->serializer->serialize($content, 'json'), Response::HTTP_OK, ['Content-Type' => 'application/json']);
+        return new Response($this->serializer->serialize($content, 'json', $parameters),
+            Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 
     public function error($error)

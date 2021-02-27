@@ -40,7 +40,7 @@ class CryptoController extends AbstractController
      */
     public function getPlateformeReferentiel()
     {
-        return $this->jsonResponse->success($this->plateformeRepository->findAll(), 'liste_plateformes');
+        return $this->jsonResponse->success($this->plateformeRepository->findAll(), ['liste_plateformes']);
     }
 
     /**
