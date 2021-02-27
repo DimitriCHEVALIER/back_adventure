@@ -14,8 +14,15 @@ class JsonResponse
         $this->serializer = $serializer;
     }
 
-    public function success($content)
+    public function success($content, $groups = null)
     {
+        $parameters = [
+            'Content-Type' => 'application/json',
+        ];
+        if (null !== $groups) {
+            $parameters['groups'] = $groups;
+        }
+
         return new Response($this->serializer->serialize($content, 'json'), Response::HTTP_OK, ['Content-Type' => 'application/json']);
     }
 

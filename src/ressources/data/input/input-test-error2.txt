@@ -1,0 +1,4 @@
+C - 2 - 2
+M - 2 - 0
+T - 0 - 0 - 2
+A - Daniel Jackson - 1 - 1 - S - DDAGAGGAGGA

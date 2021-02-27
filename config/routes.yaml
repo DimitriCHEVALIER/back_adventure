@@ -7,6 +7,11 @@ fos_get_output_file:
   path: /get_output_file/{data}
   methods: [POST]
 
+fos_create_order:
+  controller: App\Controller\CryptoController::insertOrder
+  path: /insert-order/{data}
+  methods: [POST]
+
 fos_get_input_file:
   controller: App\Controller\DataFileController::getInputFile
   path: /get_input_file/{name}
