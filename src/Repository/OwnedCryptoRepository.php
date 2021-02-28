@@ -2,7 +2,9 @@
 
 namespace App\Repository;
 
+use App\Entity\Cryptocurrency;
 use App\Entity\OwnedCrypto;
+use App\Entity\Plateforme;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -36,15 +38,17 @@ class OwnedCryptoRepository extends ServiceEntityRepository
     }
     */
 
-    /*
-    public function findOneBySomeField($value): ?OwnedCrypto
+    public function findOneByPlateformeAndCryptoCurrency(Plateforme $plateforme, Cryptocurrency $cryptoCurrency): ?OwnedCrypto
     {
         return $this->createQueryBuilder('o')
-            ->andWhere('o.exampleField = :val')
-            ->setParameter('val', $value)
+            ->leftJoin('o.plateforme', 'pf')
+            ->leftJoin('o.crytocurrency', 'crypto')
+            ->andWhere('pf.code = :plateforme')
+            ->andWhere('crypto.code = :cryptoCurrency')
+            ->setParameter('plateforme', $plateforme->getCode())
+            ->setParameter('cryptoCurrency', $cryptoCurrency->getCode())
             ->getQuery()
             ->getOneOrNullResult()
         ;
     }
-    */
 }

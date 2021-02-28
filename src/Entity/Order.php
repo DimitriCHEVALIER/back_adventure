@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\OrderRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=OrderRepository::class)
@@ -21,27 +22,32 @@ class Order
     /**
      * @ORM\ManyToOne(targetEntity=Cryptocurrency::class, inversedBy="orders")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"return-order"})
      */
     private $originalCurrency;
 
     /**
      * @ORM\ManyToOne(targetEntity=Cryptocurrency::class, inversedBy="ordersBought")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"return-order"})
      */
     private $newCurrency;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"return-order"})
      */
     private $amountOldCurrency;
 
     /**
      * @ORM\Column(type="integer")
+     * @Groups({"return-order"})
      */
     private $amountNewCurrency;
 
     /**
      * @ORM\ManyToOne(targetEntity=Plateforme::class, inversedBy="orders")
+     * @Groups({"return-order"})
      */
     private $plateforme;
 

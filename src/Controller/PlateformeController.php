@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class CryptoController extends AbstractController
+class PlateformeController extends AbstractController
 {
     private $jsonResponse;
     private $plateformeRepository;
@@ -29,7 +29,7 @@ class CryptoController extends AbstractController
      */
     public function getPlateformes()
     {
-        return $this->jsonResponse->success($this->plateformeRepository->findAll());
+        return $this->jsonResponse->success($this->plateformeRepository->findAll(), ['single-plateforme']);
     }
 
     /**
@@ -52,16 +52,6 @@ class CryptoController extends AbstractController
      */
     public function getPlateforme($code)
     {
-        return $this->jsonResponse->success($this->plateformeRepository->findOneByCode($code));
-    }
-
-    /**
-     * @Route("/insert-order")
-     *
-     */
-    public function insertOrder(Request $request)
-    {
-        dump($request);
-        dd('deo');
+        return $this->jsonResponse->success($this->plateformeRepository->findOneByCode($code), ['single-plateforme']);
     }
 }

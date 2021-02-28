@@ -6,6 +6,7 @@ use App\Repository\CryptocurrencyRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=CryptocurrencyRepository::class)
@@ -21,16 +22,19 @@ class Cryptocurrency
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"currencies-referentiel"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"currencies-referentiel"})
      */
     private $code;
 
     /**
      * @ORM\OneToMany(targetEntity=OwnedCrypto::class, mappedBy="crytocurrency")
+     * @Groups({"currencies-referentiel"})
      */
     private $ownedCryptos;
 

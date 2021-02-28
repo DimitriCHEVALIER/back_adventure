@@ -34,9 +34,9 @@ class OwnedCrypto
     private $amount;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="float", nullable=true)
      */
-    private $euroAmountOrigin;
+    private $averageEuroEq;
 
     public function getId(): ?int
     {
@@ -79,14 +79,14 @@ class OwnedCrypto
         return $this;
     }
 
-    public function getEuroAmountOrigin(): ?int
+    public function getEuroAmountOrigin(): ?float
     {
-        return $this->euroAmountOrigin;
+        return $this->averageEuroEq;
     }
 
-    public function setEuroAmountOrigin(?int $euroAmountOrigin): self
+    public function setEuroAmountOrigin(?float $averageEuroEq): self
     {
-        $this->euroAmountOrigin = $euroAmountOrigin;
+        $this->averageEuroEq = $averageEuroEq;
 
         return $this;
     }
