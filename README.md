@@ -9,3 +9,7 @@ Cette installation nécéssite d'avoir au préalable :
 
 # Tests unitaires
 - php bin/phpunit
+
+
+# doctrine
+php bin/console doctrine:schema:update --force

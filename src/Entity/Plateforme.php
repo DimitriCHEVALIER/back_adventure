@@ -22,19 +22,19 @@ class Plateforme
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"liste_plateformes, single-plateforme"})
+     * @Groups({"liste_plateformes", "simple_plateforme"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"liste_plateformes, single-plateforme"})
+     * @Groups({"liste_plateformes", "simple_plateforme"})
      */
     private $code;
 
     /**
      * @ORM\Column(type="integer")
-     * @Groups({"single-plateforme"})
+     * @Groups({"simple_plateforme"})
      */
     private $amountInvestment;
 
@@ -154,4 +154,5 @@ class Plateforme
 
         return $this;
     }
+
 }

@@ -31,7 +31,7 @@ class CurrencyController extends AbstractController
      */
     public function getCurrenciesReferentiel()
     {
-        return $this->jsonResponse->success($this->cryptocurrencyRepository->findAll(), 'currencies-referentiel');
+        return $this->jsonResponse->success($this->cryptocurrencyRepository->findAll(), ['currencies_referentiel']);
     }
 
     /**

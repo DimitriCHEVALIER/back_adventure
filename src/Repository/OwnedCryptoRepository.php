@@ -38,15 +38,15 @@ class OwnedCryptoRepository extends ServiceEntityRepository
     }
     */
 
-    public function findOneByPlateformeAndCryptoCurrency(Plateforme $plateforme, Cryptocurrency $cryptoCurrency): ?OwnedCrypto
+    public function findOneByPlateformeAndCryptoCurrency(string $plateformeCode, string $cryptoCurrencyCode): ?OwnedCrypto
     {
         return $this->createQueryBuilder('o')
             ->leftJoin('o.plateforme', 'pf')
             ->leftJoin('o.crytocurrency', 'crypto')
             ->andWhere('pf.code = :plateforme')
             ->andWhere('crypto.code = :cryptoCurrency')
-            ->setParameter('plateforme', $plateforme->getCode())
-            ->setParameter('cryptoCurrency', $cryptoCurrency->getCode())
+            ->setParameter('plateforme', $plateformeCode)
+            ->setParameter('cryptoCurrency', $cryptoCurrencyCode)
             ->getQuery()
             ->getOneOrNullResult()
         ;

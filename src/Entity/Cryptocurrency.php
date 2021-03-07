@@ -13,6 +13,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
  */
 class Cryptocurrency
 {
+    const EURO_CODE = 'EUR';
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -22,19 +24,19 @@ class Cryptocurrency
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"currencies-referentiel"})
+     * @Groups({"currencies_referentiel"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"currencies-referentiel"})
+     * @Groups({"currencies_referentiel"})
      */
     private $code;
 
     /**
      * @ORM\OneToMany(targetEntity=OwnedCrypto::class, mappedBy="crytocurrency")
-     * @Groups({"currencies-referentiel"})
+     * @Groups({"currencies_referentiel"})
      */
     private $ownedCryptos;
 

@@ -29,7 +29,7 @@ class PlateformeController extends AbstractController
      */
     public function getPlateformes()
     {
-        return $this->jsonResponse->success($this->plateformeRepository->findAll(), ['single-plateforme']);
+        return $this->jsonResponse->success($this->plateformeRepository->findAll(), ['simple_plateforme']);
     }
 
     /**
@@ -52,6 +52,6 @@ class PlateformeController extends AbstractController
      */
     public function getPlateforme($code)
     {
-        return $this->jsonResponse->success($this->plateformeRepository->findOneByCode($code), ['single-plateforme']);
+        return $this->jsonResponse->success($this->plateformeRepository->findOneByCode($code), ['simple_plateforme']);
     }
 }

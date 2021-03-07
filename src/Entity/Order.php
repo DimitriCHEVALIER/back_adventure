@@ -34,13 +34,13 @@ class Order
     private $newCurrency;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      * @Groups({"return-order"})
      */
     private $amountOldCurrency;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="float")
      * @Groups({"return-order"})
      */
     private $amountNewCurrency;
@@ -80,24 +80,24 @@ class Order
         return $this;
     }
 
-    public function getAmountOldCurrency(): ?int
+    public function getAmountOldCurrency(): ?float
     {
         return $this->amountOldCurrency;
     }
 
-    public function setAmountOldCurrency(int $amountOldCurrency): self
+    public function setAmountOldCurrency(float $amountOldCurrency): self
     {
         $this->amountOldCurrency = $amountOldCurrency;
 
         return $this;
     }
 
-    public function getAmountNewCurrency(): ?int
+    public function getAmountNewCurrency(): ?float
     {
         return $this->amountNewCurrency;
     }
 
-    public function setAmountNewCurrency(int $amountNewCurrency): self
+    public function setAmountNewCurrency(float $amountNewCurrency): self
     {
         $this->amountNewCurrency = $amountNewCurrency;
 
