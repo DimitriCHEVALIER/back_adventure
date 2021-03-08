@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\OwnedCryptoRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=OwnedCryptoRepository::class)
@@ -20,21 +21,25 @@ class OwnedCrypto
     /**
      * @ORM\ManyToOne(targetEntity=Cryptocurrency::class, inversedBy="ownedCryptos")
      * @ORM\JoinColumn(nullable=false)
+     * @Groups({"get_owned_cryptos"})
      */
     private $crytocurrency;
 
     /**
      * @ORM\ManyToOne(targetEntity=Plateforme::class, inversedBy="ownedCryptos")
+     * @Groups({"get_owned_cryptos"})
      */
     private $plateforme;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"get_owned_cryptos"})
      */
     private $amount;
 
     /**
      * @ORM\Column(type="float", nullable=true)
+     * @Groups({"get_owned_cryptos"})
      */
     private $averageEuroEq;
 
@@ -79,12 +84,12 @@ class OwnedCrypto
         return $this;
     }
 
-    public function getEuroAmountOrigin(): ?float
+    public function getAverageEuroEq(): ?float
     {
         return $this->averageEuroEq;
     }
 
-    public function setEuroAmountOrigin(?float $averageEuroEq): self
+    public function setAverageEuroEq(?float $averageEuroEq): self
     {
         $this->averageEuroEq = $averageEuroEq;
 

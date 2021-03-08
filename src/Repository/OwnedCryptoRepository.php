@@ -21,22 +21,17 @@ class OwnedCryptoRepository extends ServiceEntityRepository
         parent::__construct($registry, OwnedCrypto::class);
     }
 
-    // /**
-    //  * @return OwnedCrypto[] Returns an array of OwnedCrypto objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findOneByPlateforme(string $plateformeCode): array
     {
         return $this->createQueryBuilder('o')
-            ->andWhere('o.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('o.id', 'ASC')
-            ->setMaxResults(10)
+            ->leftJoin('o.plateforme', 'pf')
+            ->leftJoin('o.crytocurrency', 'crypto')
+            ->andWhere('pf.code = :plateforme')
+            ->setParameter('plateforme', $plateformeCode)
             ->getQuery()
             ->getResult()
-        ;
+            ;
     }
-    */
 
     public function findOneByPlateformeAndCryptoCurrency(string $plateformeCode, string $cryptoCurrencyCode): ?OwnedCrypto
     {

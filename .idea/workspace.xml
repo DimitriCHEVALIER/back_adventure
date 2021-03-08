@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43a9b11e-7ee2-4bcc-8271-5cdf0ff19b7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/OwnedCryptoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210227200358.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210228192800.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CurrencyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CurrencyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PlateformeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlateformeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Plateforme.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Plateforme.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/OwnedCryptoRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/OwnedCryptoRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/OrderService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/OrderService.php" afterDir="false" />
     </list>
@@ -44,12 +38,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Plateforme.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CurrencyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2618">
-              <caret line="158" selection-start-line="158" selection-end-line="158" />
+            <state relative-caret-position="680">
+              <caret line="46" column="79" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
               <folding>
-                <element signature="e#30#70#0#PHP" expanded="true" />
+                <element signature="e#34#78#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/OwnedCryptoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Utils/JsonResponse.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="e#29#75#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Cryptocurrency.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="442">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
               <folding>
                 <element signature="e#30#74#0#PHP" expanded="true" />
               </folding>
@@ -70,22 +85,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/OwnedCrypto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+            <state relative-caret-position="1428">
+              <caret line="86" column="36" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="36" />
               <folding>
                 <element signature="e#30#71#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-              <folding>
-                <element signature="e#34#74#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Service/OrderService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+            <state relative-caret-position="203">
+              <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
               <folding>
                 <element signature="e#31#61#0#PHP" expanded="true" />
               </folding>
@@ -104,10 +107,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Order.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/DataFileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
+            <state relative-caret-position="323">
+              <caret line="26" selection-start-line="26" selection-end-line="42" selection-end-column="5" />
+              <folding>
+                <element signature="e#34#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,10 +121,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/OwnedCryptoRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+            <state relative-caret-position="323">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="e#34#64#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/OrderController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="32" column="70" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="70" />
+              <folding>
+                <element signature="e#34#62#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,10 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>POST</find>
-      <find>nbrTresors</find>
-      <find>dd</find>
-      <find>let's go</find>
       <find>serializer</find>
       <find>new CaseMap</find>
       <find>setX</find>
@@ -156,7 +170,18 @@
       <find>amount</find>
       <find>$amount</find>
       <find>amountNewCurrency</find>
+      <find>createQueryBuilder</find>
+      <find>get-owned-cryptos</find>
+      <find>test</find>
+      <find>setEuroAmountOrigin</find>
+      <find>$averageEuroEq</find>
+      <find>getEuroAmountOrigin</find>
     </findStrings>
+    <replaceStrings>
+      <replace>get_owned_cryptos</replace>
+      <replace>setAverageEuroEq</replace>
+      <replace>getAverageEuroEq</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>C:\Users\dichevalier\Documents\test carbon front\back_adventure\src</dir>
     </dirStrings>
@@ -191,15 +216,16 @@
         <option value="$PROJECT_DIR$/src/Service/CryptoCurrencyService.php" />
         <option value="$PROJECT_DIR$/src/Controller/OrderController.php" />
         <option value="$PROJECT_DIR$/src/Mappers/OrderMapper.php" />
-        <option value="$PROJECT_DIR$/src/Utils/JsonResponse.php" />
         <option value="$PROJECT_DIR$/src/Controller/CurrencyController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Plateforme.php" />
         <option value="$PROJECT_DIR$/src/Controller/PlateformeController.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" />
-        <option value="$PROJECT_DIR$/src/Repository/OwnedCryptoRepository.php" />
-        <option value="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" />
         <option value="$PROJECT_DIR$/src/Entity/Order.php" />
+        <option value="$PROJECT_DIR$/src/Repository/OwnedCryptoRepository.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" />
+        <option value="$PROJECT_DIR$/src/Controller/OwnedCryptoController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" />
+        <option value="$PROJECT_DIR$/src/Utils/JsonResponse.php" />
         <option value="$PROJECT_DIR$/src/Service/OrderService.php" />
       </list>
     </option>
@@ -313,12 +339,6 @@
             <path>
               <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
               <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -349,6 +369,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
+              <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -358,21 +389,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Service" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Controller" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\input" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\tests" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\config\routes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\output" />
       <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\input" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Controller" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Service" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\input" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\tests" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\config\routes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -426,18 +457,20 @@
       <workItem from="1614454731553" duration="18040000" />
       <workItem from="1614619544018" duration="5291000" />
       <workItem from="1614705390680" duration="1286000" />
-      <workItem from="1615136887173" duration="4725000" />
+      <workItem from="1615136887173" duration="7299000" />
+      <workItem from="1615144892456" duration="935000" />
+      <workItem from="1615146104064" duration="1585000" />
+      <workItem from="1615199743155" duration="812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67458000" />
+    <option name="totallyTimeSpent" value="73364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29932886" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27651006" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -450,34 +483,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5084986" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.27903682" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3295302" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26308724" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.43201134" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -629,16 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/DataFileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="66" selection-end-column="5" />
-          <folding>
-            <element signature="e#34#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/GetSetMethodNormalizer.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -705,62 +707,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CurrencyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="46" column="79" lean-forward="true" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
-          <folding>
-            <element signature="e#34#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/JsonResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#29#75#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Plateforme.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2618">
           <caret line="158" selection-start-line="158" selection-end-line="158" />
           <folding>
             <element signature="e#30#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-          <folding>
-            <element signature="e#34#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-          <folding>
-            <element signature="e#34#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Cryptocurrency.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="e#30#74#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -775,37 +727,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+          <folding>
+            <element signature="e#34#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="788" column="20" selection-start-line="788" selection-start-column="20" selection-end-line="788" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CurrencyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="46" column="79" selection-start-line="46" selection-start-column="79" selection-end-line="46" selection-end-column="79" />
+          <folding>
+            <element signature="e#34#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/OwnedCryptoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/JsonResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#29#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Cryptocurrency.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding>
+            <element signature="e#30#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/OwnedCrypto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+        <state relative-caret-position="1428">
+          <caret line="86" column="36" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="36" />
           <folding>
             <element signature="e#30#71#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/DataFileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" selection-start-line="26" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#34#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/OwnedCryptoRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        <state relative-caret-position="323">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="e#34#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Order.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="94" column="50" selection-start-line="94" selection-start-column="50" selection-end-line="94" selection-end-column="50" />
+        <state relative-caret-position="459">
+          <caret line="32" column="70" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="70" />
+          <folding>
+            <element signature="e#34#62#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/OrderService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
+        <state relative-caret-position="203">
+          <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
           <folding>
             <element signature="e#31#61#0#PHP" expanded="true" />
           </folding>

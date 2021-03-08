@@ -24,13 +24,13 @@ class Cryptocurrency
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"currencies_referentiel"})
+     * @Groups({"currencies_referentiel", "get_owned_cryptos"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"currencies_referentiel"})
+     * @Groups({"currencies_referentiel", "get_owned_cryptos"})
      */
     private $code;
 

@@ -48,14 +48,14 @@ class OrderService
         $ownedCryptoCurrency->setPlateforme($order->getPlateforme());
         $ownedCryptoCurrency->setAmount($order->getAmountNewCurrency());
         $ownedCryptoCurrency->setCrytocurrency($order->getNewCurrency());
-        $ownedCryptoCurrency->setEuroAmountOrigin($this->euroEqToTransfer);
+        $ownedCryptoCurrency->setAverageEuroEq($this->euroEqToTransfer);
         $this->entityManager->persist($ownedCryptoCurrency);
     }
 
     private function updateOwnedCryptoCurrency(OwnedCrypto $ownedCrypto, Order $order, $action)
     {
         $ownedCrypto->setAmount($ownedCrypto->getAmount() + $action * $this->getAmountToUpdate($order, $action));
-        $ownedCrypto->setEuroAmountOrigin($ownedCrypto->getEuroAmountOrigin() + $action * $this->euroEqToTransfer);
+        $ownedCrypto->setAverageEuroEq($ownedCrypto->getAverageEuroEq() + $action * $this->euroEqToTransfer);
     }
 
     private function getAmountToUpdate(Order $order, $action)
@@ -77,7 +77,7 @@ class OrderService
             $ownedCryptoRepo = $this->entityManager->getRepository(OwnedCrypto::class);
             $cryptoBought = $ownedCryptoRepo->findOneByPlateformeAndCryptoCurrency($order->getPlateforme()->getCode(), $order->getOriginalCurrency()->getCode());
 
-            return ($order->getAmountOldCurrency() / $cryptoBought->getAmount()) * $cryptoBought->getEuroAmountOrigin();
+            return ($order->getAmountOldCurrency() / $cryptoBought->getAmount()) * $cryptoBought->getAverageEuroEq();
         }
 
         return 0;
