@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\OwnedCryptoRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
@@ -15,13 +17,14 @@ class OwnedCrypto
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"get_owned_cryptos"})
      */
     private $id;
 
     /**
      * @ORM\ManyToOne(targetEntity=Cryptocurrency::class, inversedBy="ownedCryptos")
      * @ORM\JoinColumn(nullable=false)
-     * @Groups({"get_owned_cryptos"})
+     * @Groups({"get_owned_cryptos", "get_benefits"})
      */
     private $crytocurrency;
 
@@ -42,6 +45,16 @@ class OwnedCrypto
      * @Groups({"get_owned_cryptos"})
      */
     private $averageEuroEq;
+
+    /**
+     * @ORM\OneToMany(targetEntity=BeneficeByOwnedCrypto::class, mappedBy="ownedCrypto")
+     */
+    private $beneficeByOwnedCryptos;
+
+    public function __construct()
+    {
+        $this->beneficeByOwnedCryptos = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -92,6 +105,36 @@ class OwnedCrypto
     public function setAverageEuroEq(?float $averageEuroEq): self
     {
         $this->averageEuroEq = $averageEuroEq;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|BeneficeByOwnedCrypto[]
+     */
+    public function getBeneficeByOwnedCryptos(): Collection
+    {
+        return $this->beneficeByOwnedCryptos;
+    }
+
+    public function addBeneficeByOwnedCrypto(BeneficeByOwnedCrypto $beneficeByOwnedCrypto): self
+    {
+        if (!$this->beneficeByOwnedCryptos->contains($beneficeByOwnedCrypto)) {
+            $this->beneficeByOwnedCryptos[] = $beneficeByOwnedCrypto;
+            $beneficeByOwnedCrypto->setOwnedCrypto($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBeneficeByOwnedCrypto(BeneficeByOwnedCrypto $beneficeByOwnedCrypto): self
+    {
+        if ($this->beneficeByOwnedCryptos->removeElement($beneficeByOwnedCrypto)) {
+            // set the owning side to null (unless already changed)
+            if ($beneficeByOwnedCrypto->getOwnedCrypto() === $this) {
+                $beneficeByOwnedCrypto->setOwnedCrypto(null);
+            }
+        }
 
         return $this;
     }

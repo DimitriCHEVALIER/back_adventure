@@ -19,18 +19,19 @@ class Cryptocurrency
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups({"get_owned_cryptos"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"currencies_referentiel", "get_owned_cryptos"})
+     * @Groups({"currencies_referentiel", "get_owned_cryptos", "get_benefits"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"currencies_referentiel", "get_owned_cryptos"})
+     * @Groups({"currencies_referentiel", "get_owned_cryptos", "get_benefits"})
      */
     private $code;
 
