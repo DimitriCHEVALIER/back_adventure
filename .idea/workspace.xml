@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43a9b11e-7ee2-4bcc-8271-5cdf0ff19b7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/BeneficeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mappers/BenefitsMapper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/BeneficeService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CoinGeckoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dto/CoinDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/CoinGeckoService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/back_adventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/back_adventure.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,66 +41,57 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/BeneficeController.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="48" column="52" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="52" />
+            <state relative-caret-position="918">
+              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
               <folding>
-                <element signature="e#34#65#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/BeneficeByOwnedCryptoRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/OwnedCryptoRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="32" selection-end-column="13" />
-              <folding>
-                <element signature="e#34#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/BeneficeByOwnedCrypto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="21" column="46" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/OwnedCrypto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="49" />
-              <folding>
-                <element signature="e#30#71#0#PHP" expanded="true" />
+                <element signature="e#34#74#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Cryptocurrency.php">
+        <entry file="file://$PROJECT_DIR$/src/Service/CoinGeckoService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+            <state relative-caret-position="62">
+              <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
               <folding>
-                <element signature="e#30#74#0#PHP" expanded="true" />
+                <element signature="e#31#51#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dto/CoinDto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Order.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="24" selection-end-column="32" />
+              <folding>
+                <element signature="e#30#65#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CoinGeckoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="28" column="101" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="101" />
+              <folding>
+                <element signature="e#34#67#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,6 +187,9 @@
         <option value="$PROJECT_DIR$/src/Entity/BeneficeByOwnedCrypto.php" />
         <option value="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" />
         <option value="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CoinGeckoController.php" />
+        <option value="$PROJECT_DIR$/src/Dto/CoinDto.php" />
+        <option value="$PROJECT_DIR$/src/Service/CoinGeckoService.php" />
       </list>
     </option>
   </component>
@@ -277,6 +274,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -306,12 +304,6 @@
               <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
               <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,12 +311,6 @@
               <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Mappers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="back_adventure" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="back_adventure" type="b2602c69:ProjectViewProjectNode" />
@@ -340,21 +326,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Mappers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Service" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Mappers" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Service" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Controller" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\input" />
-      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\output" />
       <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\input" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Service" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Controller" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\Mappers" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\src\ressources\data\input" />
+      <recent name="C:\Users\dichevalier\Documents\test carbon front\back_adventure\tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -412,12 +398,12 @@
       <workItem from="1615144892456" duration="935000" />
       <workItem from="1615146104064" duration="1585000" />
       <workItem from="1615199743155" duration="812000" />
-      <workItem from="1615309900803" duration="4123000" />
+      <workItem from="1615309900803" duration="9594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83251000" />
+    <option name="totallyTimeSpent" value="88722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -436,7 +422,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" visible="true" weight="0.27903682" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" visible="true" weight="0.2181303" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.27903682" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -448,24 +434,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Joueur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ressources/data/output/output_Adventure.txt" />
     <entry file="file://$PROJECT_DIR$/src/ressources/data/input/test" />
     <entry file="file://$PROJECT_DIR$/src/ressources/data/input/test.txt" />
     <entry file="file://$PROJECT_DIR$/bin/.phpunit/phpunit-8.5-0/src/Framework/Assert.php">
@@ -626,27 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-          <folding>
-            <element signature="e#34#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="788" column="20" selection-start-line="788" selection-start-column="20" selection-end-line="788" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="6" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -671,16 +622,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/migrations/Version20210308173822.php" />
-    <entry file="file://$PROJECT_DIR$/src/Service/OrderService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
-          <folding>
-            <element signature="e#31#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/CryptoCurrencyService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -701,42 +642,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mappers/BenefitsMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-          <folding>
-            <element signature="e#31#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/BeneficeService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#31#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CurrencyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-32">
           <caret line="27" column="62" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="62" />
           <folding>
             <element signature="e#34#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="32" column="70" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="70" />
-          <folding>
-            <element signature="e#34#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -796,6 +707,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Cryptocurrency.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+          <folding>
+            <element signature="e#30#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/OwnedCrypto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
@@ -806,12 +727,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Cryptocurrency.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="33" column="77" selection-start-line="33" selection-start-column="77" selection-end-line="33" selection-end-column="77" />
+        <state relative-caret-position="289">
+          <caret line="29" column="64" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="64" />
           <folding>
-            <element signature="e#30#74#0#PHP" expanded="true" />
+            <element signature="e#34#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Joueur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/OrderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="54" column="95" selection-start-line="54" selection-start-column="95" selection-end-line="54" selection-end-column="95" />
+          <folding>
+            <element signature="e#31#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/BeneficeService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#31#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mappers/BenefitsMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="54" />
+          <folding>
+            <element signature="e#31#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+          <folding>
+            <element signature="e#34#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <element signature="e#30#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CoinGeckoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="28" column="101" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="101" />
+          <folding>
+            <element signature="e#34#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dto/CoinDto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/CoinGeckoService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+          <folding>
+            <element signature="e#31#51#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
