@@ -32,7 +32,12 @@ class CoinGeckoService
         $arrayReturnValues = [];
         /** @var Cryptocurrency $coinDatabase */
         foreach ($allCoinsInDatabase as $coinDatabase) {
-            $key = array_search(strtolower($coinDatabase->getCode()), array_column($tabAllCoins, 'symbol'));
+            $key = '';
+            if (!$coinDatabase->getNameForGeckoFetch()) {
+                $key = array_search(strtolower($coinDatabase->getCode()), array_column($tabAllCoins, 'symbol'));
+            } else {
+                $key = array_search($coinDatabase->getNameForGeckoFetch(), array_column($tabAllCoins, 'name'));
+            }
             if ($key) {
                 $responseCoin = $this->client->request(
                     'GET',

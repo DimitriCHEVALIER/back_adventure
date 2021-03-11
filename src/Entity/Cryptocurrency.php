@@ -36,6 +36,11 @@ class Cryptocurrency
     private $code;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $nameForGeckoFetch;
+
+    /**
      * @ORM\OneToMany(targetEntity=OwnedCrypto::class, mappedBy="crytocurrency")
      * @Groups({"currencies_referentiel"})
      */
@@ -174,6 +179,24 @@ class Cryptocurrency
             }
         }
 
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNameForGeckoFetch()
+    {
+        return $this->nameForGeckoFetch;
+    }
+
+    /**
+     * @param mixed $nameForGeckoFetch
+     * @return Cryptocurrency
+     */
+    public function setNameForGeckoFetch($nameForGeckoFetch)
+    {
+        $this->nameForGeckoFetch = $nameForGeckoFetch;
         return $this;
     }
 }
