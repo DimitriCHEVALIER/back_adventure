@@ -29,7 +29,9 @@ class CoinGeckoService
 
         $allCoinsInDatabase = $this->entityManager->getRepository(Cryptocurrency::class)->findAll();
 
-        $arrayReturnValues = [];
+        $arrayFilledCoins = [];
+
+        $coinsToQuery = '';
         /** @var Cryptocurrency $coinDatabase */
         foreach ($allCoinsInDatabase as $coinDatabase) {
             $key = '';
@@ -39,22 +41,29 @@ class CoinGeckoService
                 $key = array_search($coinDatabase->getNameForGeckoFetch(), array_column($tabAllCoins, 'name'));
             }
             if ($key) {
-                $responseCoin = $this->client->request(
-                    'GET',
-                    'https://api.coingecko.com/api/v3/coins/'.$tabAllCoins[$key]->id.'?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false'
-                );
-                $responseCoin = json_decode($responseCoin->getContent());
-                if (property_exists($responseCoin, 'market_data') && property_exists($responseCoin->market_data, 'current_price')
-                    && property_exists($responseCoin->market_data->current_price, 'eur')) {
-                    $coinDto = new CoinDto();
-                    $coinDto->setValue($responseCoin->market_data->current_price->eur);
-                    $coinDto->setNom($coinDatabase->getName());
-                    $coinDto->setCode($coinDatabase->getCode());
-                    array_push($arrayReturnValues, $coinDto);
-                }
+                $coinsToQuery = $coinsToQuery.$tabAllCoins[$key]->id.',';
+                $coinDto = new CoinDto();
+                $coinDto->setCode($coinDatabase->getCode());
+                $coinDto->setNom($coinDatabase->getName());
+                $coinDto->setId($tabAllCoins[$key]->id);
+                array_push($arrayFilledCoins, $coinDto);
+            }
+        }
+        $coinsToQuery = substr($coinsToQuery, 0, -1);
+        $response = $this->client->request(
+            'GET',
+            'https://api.coingecko.com/api/v3/simple/price?ids='.$coinsToQuery.'&vs_currencies=eur'
+        );
+
+        $tabAllCoinsValue = json_decode(json_encode(json_decode($response->getContent())), true);
+
+        /** @var CoinDto $filledCoin */
+        foreach ($arrayFilledCoins as $filledCoin) {
+            if (key_exists($filledCoin->getId(), $tabAllCoinsValue)) {
+                $filledCoin->setValue($tabAllCoinsValue[$filledCoin->getId()]['eur']);
             }
         }
 
-        return $arrayReturnValues;
+        return $arrayFilledCoins;
     }
 }
