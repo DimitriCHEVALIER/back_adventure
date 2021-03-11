@@ -2,11 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Plateforme;
 use App\Repository\PlateformeRepository;
 use App\Utils\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -24,7 +23,6 @@ class PlateformeController extends AbstractController
     /**
      * @Route("/get_plateformes", name="get_plateformes")
      *
-     *
      * @return Response
      */
     public function getPlateformes()
@@ -34,7 +32,6 @@ class PlateformeController extends AbstractController
 
     /**
      * @Route("/get_plateformes_referentiels", name="get_plateformes_referentiels")
-     *
      *
      * @return Response
      */
@@ -52,6 +49,13 @@ class PlateformeController extends AbstractController
      */
     public function getPlateforme($code)
     {
+        if (Plateforme::ALL_PLATEFORMES_CODE === $code) {
+            $allPlateforme = new Plateforme();
+            $allPlateforme->setCode('ALL');
+            $allPlateforme->setName('All plateformes');
+            return $this->jsonResponse->success($allPlateforme, ['simple_plateforme']);
+        }
+
         return $this->jsonResponse->success($this->plateformeRepository->findOneByCode($code), ['simple_plateforme']);
     }
 }

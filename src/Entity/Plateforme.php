@@ -13,6 +13,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
  */
 class Plateforme
 {
+    const ALL_PLATEFORMES_CODE = 'ALL';
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -22,13 +23,13 @@ class Plateforme
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"liste_plateformes", "simple_plateforme"})
+     * @Groups({"liste_plateformes", "simple_plateforme", "get_owned_cryptos"})
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"liste_plateformes", "simple_plateforme"})
+     * @Groups({"liste_plateformes", "simple_plateforme", "get_owned_cryptos"})
      */
     private $code;
 

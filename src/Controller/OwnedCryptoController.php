@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Plateforme;
 use App\Repository\OwnedCryptoRepository;
 use App\Utils\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,6 +29,10 @@ class OwnedCryptoController extends AbstractController
      */
     public function getOwnedCryptoByPlateforme($code)
     {
+        if (Plateforme::ALL_PLATEFORMES_CODE === $code) {
+            return $this->jsonResponse->success($this->ownedCryptoRepository->findAll(), ['get_owned_cryptos']);
+        }
+
         return $this->jsonResponse->success($this->ownedCryptoRepository->findOneByPlateforme($code), 'get_owned_cryptos');
     }
 }
