@@ -28,4 +28,16 @@ class CoinGeckoController extends AbstractController
     {
         return $this->jsonResponse->success($this->coinGeckoService->getListIdCoins(), ['coins_values']);
     }
+
+    /**
+     * @Route("/get_chart/{code}", name="get_chart")
+     *
+     * @param $code
+     *
+     * @return Response
+     */
+    public function getChartCoin($code)
+    {
+
+    }
 }

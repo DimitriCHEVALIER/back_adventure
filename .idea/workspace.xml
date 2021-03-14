@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43a9b11e-7ee2-4bcc-8271-5cdf0ff19b7c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/OwnedCryptoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OwnedCryptoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PlateformeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlateformeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Plateforme.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Plateforme.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CoinGeckoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CoinGeckoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/CoinDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dto/CoinDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/CoinGeckoService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/CoinGeckoService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
+            <state relative-caret-position="782">
               <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
               <folding>
                 <element signature="e#34#60#0#PHP" expanded="true" />
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/OwnedCryptoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="402">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#34#60#0#PHP" expanded="true" />
               </folding>
@@ -60,9 +60,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CoinGeckoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
+              <folding>
+                <element signature="e#34#67#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Service/CoinGeckoService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="e#31#51#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dto/CoinDto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/OwnedCrypto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="459">
               <caret line="31" column="80" selection-start-line="31" selection-start-column="80" selection-end-line="32" selection-end-column="37" />
               <folding>
                 <element signature="e#30#71#0#PHP" expanded="true" />
@@ -74,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Plateforme.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-969">
+            <state relative-caret-position="187">
               <caret line="15" column="30" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="e#30#70#0#PHP" expanded="true" />
@@ -87,7 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ressources/data</find>
       <find>outputoutput_Adventure</find>
       <find>output</find>
       <find>throw new</find>
@@ -117,6 +149,7 @@
       <find>entityManager</find>
       <find>nullab</find>
       <find>get_owned_crypto_by_platform</find>
+      <find>@Route(&quot;/get_</find>
     </findStrings>
     <replaceStrings>
       <replace>get_owned_cryptos</replace>
@@ -167,15 +200,15 @@
         <option value="$PROJECT_DIR$/src/Service/BeneficeService.php" />
         <option value="$PROJECT_DIR$/src/Repository/BeneficeByOwnedCryptoRepository.php" />
         <option value="$PROJECT_DIR$/src/Entity/BeneficeByOwnedCrypto.php" />
-        <option value="$PROJECT_DIR$/src/Controller/CoinGeckoController.php" />
-        <option value="$PROJECT_DIR$/src/Dto/CoinDto.php" />
         <option value="$PROJECT_DIR$/src/Entity/Cryptocurrency.php" />
-        <option value="$PROJECT_DIR$/src/Service/CoinGeckoService.php" />
         <option value="$PROJECT_DIR$/src/Controller/BeneficeController.php" />
         <option value="$PROJECT_DIR$/src/Entity/OwnedCrypto.php" />
         <option value="$PROJECT_DIR$/src/Entity/Plateforme.php" />
         <option value="$PROJECT_DIR$/src/Controller/OwnedCryptoController.php" />
         <option value="$PROJECT_DIR$/src/Controller/PlateformeController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CoinGeckoController.php" />
+        <option value="$PROJECT_DIR$/src/Dto/CoinDto.php" />
+        <option value="$PROJECT_DIR$/src/Service/CoinGeckoService.php" />
       </list>
     </option>
   </component>
@@ -410,18 +443,20 @@
       <workItem from="1615199743155" duration="812000" />
       <workItem from="1615309900803" duration="10802000" />
       <workItem from="1615465459618" duration="2268000" />
-      <workItem from="1615482447421" duration="5540000" />
+      <workItem from="1615482447421" duration="6136000" />
+      <workItem from="1615547262661" duration="634000" />
+      <workItem from="1615673007750" duration="621000" />
+      <workItem from="1615724065113" duration="4501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97738000" />
+    <option name="totallyTimeSpent" value="104090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29261744" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.304698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -741,16 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CoinGeckoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="28" column="101" selection-start-line="28" selection-start-column="89" selection-end-line="28" selection-end-column="101" />
-          <folding>
-            <element signature="e#34#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/migrations/Version20210310173704.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -764,16 +789,6 @@
           <caret line="145" column="22" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
           <folding>
             <element signature="e#30#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/CoinGeckoService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#31#51#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -795,16 +810,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Dto/CoinDto.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="782">
+          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+          <folding>
+            <element signature="e#34#60#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/OwnedCrypto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="459">
           <caret line="31" column="80" selection-start-line="31" selection-start-column="80" selection-end-line="32" selection-end-column="37" />
           <folding>
             <element signature="e#30#71#0#PHP" expanded="true" />
@@ -814,7 +832,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Plateforme.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
+        <state relative-caret-position="187">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="30" />
           <folding>
             <element signature="e#30#70#0#PHP" expanded="true" />
@@ -822,22 +840,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PlateformeController.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/OwnedCryptoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+        <state relative-caret-position="402">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#34#60#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/OwnedCryptoController.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/CoinGeckoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        <state relative-caret-position="147">
+          <caret line="28" column="72" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="72" />
           <folding>
-            <element signature="e#34#60#0#PHP" expanded="true" />
+            <element signature="e#34#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dto/CoinDto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/CoinGeckoService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#31#51#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

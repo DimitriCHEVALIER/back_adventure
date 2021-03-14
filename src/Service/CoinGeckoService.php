@@ -52,18 +52,33 @@ class CoinGeckoService
         $coinsToQuery = substr($coinsToQuery, 0, -1);
         $response = $this->client->request(
             'GET',
-            'https://api.coingecko.com/api/v3/simple/price?ids='.$coinsToQuery.'&vs_currencies=eur'
+            'https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids='.$coinsToQuery.'&order=market_cap_desc&per_page=100&page=1&sparkline=true'
         );
 
         $tabAllCoinsValue = json_decode(json_encode(json_decode($response->getContent())), true);
 
         /** @var CoinDto $filledCoin */
         foreach ($arrayFilledCoins as $filledCoin) {
-            if (key_exists($filledCoin->getId(), $tabAllCoinsValue)) {
-                $filledCoin->setValue($tabAllCoinsValue[$filledCoin->getId()]['eur']);
+            $relatedCoin = $this->getValueInGeckoList($tabAllCoinsValue, $filledCoin->getId());
+            if ($relatedCoin) {
+                $filledCoin->setValue($relatedCoin['current_price']);
+                $filledCoin->setDateDebutChart($relatedCoin['last_updated']);
+                $filledCoin->setSparklingLastWeek($relatedCoin['sparkline_in_7d']['price']);
+                $filledCoin->setImgSrc($relatedCoin['image']);
             }
         }
 
         return $arrayFilledCoins;
+    }
+
+    private function getValueInGeckoList($list, $id): ?array
+    {
+        foreach ($list as $coin) {
+            if (key_exists('id', $coin) && $coin['id'] === $id) {
+                return $coin;
+            }
+        }
+
+        return null;
     }
 }
