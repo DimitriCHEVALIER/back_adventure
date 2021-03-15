@@ -9,3 +9,5 @@ Cette installation nécéssite d'avoir au préalable :
 
 # Tests unitaires
 - php bin/phpunit
+
+créer une base de données nommée "crypto"
