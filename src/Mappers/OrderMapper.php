@@ -26,7 +26,7 @@ class OrderMapper
             $order->setAmountOldCurrency($content->amountFistCurrency);
             $originalCurrency = $this->entityManager->getRepository(Cryptocurrency::class)->findOneByCode($content->selectedFrom);
             $newCurrency = $this->entityManager->getRepository(Cryptocurrency::class)->findOneByCode($content->selectedTo);
-            $plateforme = $this->entityManager->getRepository(Plateforme::class)->findOneByCode($content->selectedPlateforme);
+            $plateforme = $this->entityManager->getRepository(Plateforme::class)->findOneByCode($content->selectedPlateforme->code);
             $order->setOriginalCurrency($originalCurrency);
             $order->setNewCurrency($newCurrency);
             $order->setPlateforme($plateforme);
