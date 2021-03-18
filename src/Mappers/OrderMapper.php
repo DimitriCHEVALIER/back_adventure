@@ -26,12 +26,18 @@ class OrderMapper
             $order->setAmountOldCurrency($content->amountFistCurrency);
             $originalCurrency = $this->entityManager->getRepository(Cryptocurrency::class)->findOneByCode($content->selectedFrom);
             $newCurrency = $this->entityManager->getRepository(Cryptocurrency::class)->findOneByCode($content->selectedTo);
-            $plateforme = $this->entityManager->getRepository(Plateforme::class)->findOneByCode($content->selectedPlateforme->code);
+            $codePlateforme = $content->selectedPlateforme;
+            if (property_exists($codePlateforme, 'code')) {
+                $codePlateforme = $codePlateforme->code;
+            }
+            $plateforme = $this->entityManager->getRepository(Plateforme::class)->findOneByCode($codePlateforme);
             $order->setOriginalCurrency($originalCurrency);
             $order->setNewCurrency($newCurrency);
             $order->setPlateforme($plateforme);
+
             return $order;
         }
+
         return null;
     }
 }

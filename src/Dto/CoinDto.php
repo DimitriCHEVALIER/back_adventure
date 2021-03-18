@@ -36,6 +36,11 @@ class CoinDto
      */
     private $imgSrc;
 
+    /** @var float
+     * @Groups({"coins_values"})
+     */
+    private $percentageVariation24h;
+
     public function __construct()
     {
         $this->id = uniqid();
@@ -116,4 +121,23 @@ class CoinDto
 
         return $this;
     }
+
+    /**
+     * @return float
+     */
+    public function getPercentageVariation24h(): float
+    {
+        return $this->percentageVariation24h;
+    }
+
+    /**
+     * @param float $percentageVariation24h
+     * @return CoinDto
+     */
+    public function setPercentageVariation24h(float $percentageVariation24h): CoinDto
+    {
+        $this->percentageVariation24h = $percentageVariation24h;
+        return $this;
+    }
+
 }

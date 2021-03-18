@@ -65,6 +65,7 @@ class CoinGeckoService
                 $filledCoin->setDateDebutChart($relatedCoin['last_updated']);
                 $filledCoin->setSparklingLastWeek($relatedCoin['sparkline_in_7d']['price']);
                 $filledCoin->setImgSrc($relatedCoin['image']);
+                $filledCoin->setPercentageVariation24h($relatedCoin['price_change_percentage_24h']);
             }
         }
 
